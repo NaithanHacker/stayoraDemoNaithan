@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #1A202C;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DFCCA8;
+}
+
+/* Glassmorphism helpers */
+.glass-luxury-dark {
+  background: rgba(10, 17, 40, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.18);
+}
+
+.glass-luxury-light {
+  background: rgba(253, 251, 247, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+/* Luxury button glow & hover */
+.btn-gold {
+  background: linear-gradient(135deg, #C5A880 0%, #B8976C 100%);
+  color: #0A1128;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #DFCCA8 0%, #C5A880 100%);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-navy {
+  background: #0A1128;
+  color: #F8F6F2;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-navy:hover {
+  background: #142246;
+  border-color: #C5A880;
+  color: #FFFFFF;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #EADBC8 0%, #C5A880 50%, #9E7D4C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
